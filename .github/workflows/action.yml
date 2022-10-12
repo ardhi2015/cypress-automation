@@ -1,16 +1,23 @@
-name: PR Created
+name: Cypress Tests
 
-on:
-  pull_request:
+on: [push]
 
 jobs:
-  pr-notify:
+  cypress-run:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-      - name: generate env
-        run: |
-          echo "${{ secrets.SECRET }}" > cypress.env.json
-          npm install
-          npx cypress run
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
+        with:
+          name: "cypress.env.json"
+          json: ${{ secrets.SECRET }}
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: yarn run
+          start: yarn cypress:run
+          wait-on-timeout: 120
+          browser: chrome
