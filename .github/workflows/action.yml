@@ -16,6 +16,7 @@ jobs:
           json: ${{ secrets.SECRET }}
       - name: Cypress run
         uses: cypress-io/github-action@v4
+        timeout-minutes: 5
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
