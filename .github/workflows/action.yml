@@ -15,9 +15,8 @@ jobs:
           name: "cypress.env.json"
           json: ${{ secrets.SECRET }}
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
-          build: yarn run
-          start: yarn cypress:run
+          start: npm start
           wait-on-timeout: 120
           browser: chrome
