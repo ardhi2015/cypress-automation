@@ -1,8 +1,5 @@
 <!-- GETTING STARTED -->
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Register to get the API token key -  [https://www.weatherbit.io/account/create](https://www.weatherbit.io/account/create)
 2. Clone the repo
    ```sh
@@ -27,3 +24,6 @@ _Below is an example of how you can instruct your audience on installing and set
   ```sh
   npm cypress run
   ```
+
+### How to Trigger CI (Github Action)
+push something to master
