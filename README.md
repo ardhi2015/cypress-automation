@@ -32,7 +32,7 @@ _Below is an example of how you can instruct your audience on installing and set
     "api_key": "your_api_token",
     "base_url": "sample",
     "url_ui" : "sample"
-  }
+    }
    ```
 
 ### How to run
