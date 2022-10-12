@@ -1,0 +1,16 @@
+name: PR Created
+
+on:
+  pull_request:
+
+jobs:
+  pr-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: generate env
+        run: |
+          echo "${{ secrets.SECRET }}" > cypress.env.json
+          npm install
+          npx cypress run
