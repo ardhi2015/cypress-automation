@@ -4,7 +4,7 @@ describe('API Testing', () => {
     Cypress.config('baseUrl', `${base_url}`)
     let key = Cypress.env('api_key')
 
-    it('Test 1 - GET - read', () => {
+    it('Get Current Weather Data by longitud and latitude', () => {
         cy.request(`/current?lat=38&lon=78&key=${key}`).then((response) => {
             let jsonData = response.body.data[0].state_code
             cy.log(jsonData)
@@ -16,7 +16,7 @@ describe('API Testing', () => {
         })
     }),
 
-    it('Test 2 - GET - read', () => {
+    it('Get Current Weather Data by postalcode ', () => {
         cy.request(`/current?postal_code=99501&key=${key}`).then((response) => {
             let jsonData = response.body.data[0].weather
             let myJSON = JSON.stringify(jsonData)
