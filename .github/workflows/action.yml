@@ -16,11 +16,6 @@ jobs:
           json: ${{ secrets.SECRET }}
       - name: Cypress run
         uses: cypress-io/github-action@v4
-        with:
-          start: npm start
-          wait-on-timeout: 120
-          browser: chrome
-
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
