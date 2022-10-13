@@ -13,7 +13,7 @@ Automation test using  cypress. UI and API.
    ```sh
    npm install
    ```
-5. Rename `cypress.example.env.json` to `cypress.env.json` and Enter your API, base_url = `https://api.weatherbit.io/v2.0/`  then, url_ui = `https://www.service.nsw.gov.au/`.
+5. Rename `cypress.example.env.json` to `cypress.env.json` and Enter your API Token, base_url = `https://api.weatherbit.io/v2.0/`  then, url_ui = `https://www.service.nsw.gov.au/`.
    ```json
    {
     "api_key": "your_api_token",
