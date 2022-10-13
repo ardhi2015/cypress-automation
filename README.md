@@ -1,4 +1,6 @@
-<!-- GETTING STARTED -->
+GETTING STARTED
+Automation test using  cypress. UI and API.
+
 ### Installation
 1. Register to get the API token key -  [https://www.weatherbit.io/account/create](https://www.weatherbit.io/account/create)
 2. Clone the repo
@@ -21,9 +23,24 @@
    ```
 
 ### How to run
+Run test with headless mode (default)
   ```sh
   npm cypress run
   ```
 
+Run test with headed mode
+
+  ```sh
+  npm cypress run --headed
+  ```
+Run Specific Api test File
+
+  ```sh
+  npm cypress run -s cypress/e2e/api-test.cy.js
+  ```
+
+
 ### How to Trigger CI (Github Action)
-push something to master
+1. Commit Changes
+2. Push to repository
+3. Check Github Action Tab
