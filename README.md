@@ -1,4 +1,4 @@
-GETTING STARTED
+### GETTING STARTED
 Automation test using  cypress. UI and API.
 
 ### Installation
