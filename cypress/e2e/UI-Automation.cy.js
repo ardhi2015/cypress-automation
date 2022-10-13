@@ -1,4 +1,5 @@
 const locator = require("../page-object/locator");
+import suburbData from '../page-object/suburb.json'
 
 let base_url = Cypress.env('url_ui')
 
@@ -17,7 +18,7 @@ describe('empty spec', () => {
 
     cy.contains('Find locations').click()
 
-    cy.get(locator.searchSuburb).focus().clear().type('Sydney 2000{enter}', {force: true, delay: 0})
+    cy.get(locator.searchSuburb).focus().clear().type(`${suburbData.suburb1}{enter}`, {force: true, delay: 0})
     cy.contains('Rozelle Bay Maritime Service Centre').should('be.visible')
 
   })
@@ -30,7 +31,7 @@ describe('empty spec', () => {
     })
     cy.contains('Find locations').click()
 
-    cy.get(locator.searchSuburb).focus().clear().type('Sydney Domestic Airport 2020{enter}', {force: true, delay: 0})
+    cy.get(locator.searchSuburb).focus().clear().type(`${suburbData.suburb1}{enter}`, {force: true, delay: 0})
     cy.contains('Rockdale Service Centre').should('be.visible')
   })
 })
